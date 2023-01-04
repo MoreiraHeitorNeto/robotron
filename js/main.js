@@ -1,12 +1,11 @@
-alert('clique no robotron se quiser uma charada');
-function facaCharada(){
-    let charada = prompt('Qual é a fruta mais gente boa que tem?');
-    if(charada == 'uva-parça'){
-        alert('seu sem graça');
-    }else{
-        alert('é a uva-parça');
-    }
-}
+const subtrair = document.querySelector('#subtrair');
+const somar = document.querySelector('#somar');
+const braco = document.querySelector('#braco');
 
-const robotron = document.querySelector('#robotron');
-robotron.addEventListener('click', facaCharada);
+somar.addEventListener('click', (evento)=> {
+    braco.value = parseInt(braco.value)+1;
+})
+
+subtrair.addEventListener('click', (evento)=>{
+    braco.value = parseInt(braco.value)-1;
+})
